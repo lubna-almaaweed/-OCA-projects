@@ -1,0 +1,196 @@
+*{box-sizing: border-box;}
+
+body{
+    margin: 0%;
+    padding: 0%;
+    background-image: url(img/backup.jpeg);
+    
+}
+.fas {
+    color: rgb(134, 168, 182);
+}
+ul{
+    list-style: none;
+
+}
+a{
+    text-decoration: none;
+}
+section{
+    width: 100%;
+    height:95%;
+ 
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3.75rem;
+    background-color: #141024;
+    box-shadow: 1rem 1rem 6.5rem rgba(0, 0, 0, 2);
+    padding: 0px 5%;
+    width: 100%;
+    position: fixed;
+
+    
+}
+nav ul {
+    display: flex;
+
+}
+nav ul li a {
+    margin: 2rem;
+    font-family: Times, serif;
+    color: rgb(134, 168, 182);
+    font-size: 1rem;
+    font-weight: 700;
+}
+  
+.active{
+    font-size: 1.3rem;
+}
+.text-container p:nth-child(1){
+    font-family: Times, serif;
+    font-weight: bold;
+    color:rgb(134, 168, 182);
+    font-size: 3rem;
+}
+.text-container p:nth-child(2){
+    font-family:  Times, serif;
+    font-weight: bold;
+    letter-spacing: .06rem;
+    color:rgb(134, 168, 182);
+    font-size: 2rem;
+}
+
+.text-container p:nth-child(3){
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color:rgb(134, 168, 182);
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+.text-container p{
+    margin:2.2rem 0px 2rem;
+
+}
+.text-container button{
+    width: 8rem;
+    height: 2.5rem;
+    border-radius: .6rem;
+    font-family: Times, serif;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 0px .5rem;
+    box-shadow: .1rem .1rem  rgb(134, 168, 182);
+    text-align: center;
+    cursor: pointer;
+    background-color: rgb(134, 168, 182);
+    }
+.text-container{
+    position: absolute;
+    padding: 2rem;
+    left: 13%;
+    top: 43%;
+    transform: translate(-13%,-42%);
+    background: rgba(13, 26, 46, 0.667);
+}
+
+.mine{
+    height: 25rem;
+    position: absolute;
+    left: 82%;
+    bottom: 28%;
+    transform: translate(-60%);
+    border-radius: 50%;
+    border:  .4rem solid lightblue;
+}
+.mine2{
+
+    height: 25rem;
+    position: absolute;
+    left: 82%;
+    bottom: 28%;
+    transform: translate(-60%);
+    border-radius: 25%;
+    border:  .4rem solid lightblue;}
+
+.academy {
+    color: rgb(167, 206, 223);
+
+}
+.skills{
+    color: lightblue;
+    padding:45rem 0rem 0rem 4rem;
+    font-size: 3rem;
+
+}
+.schadule{
+    position: absolute;
+    padding: 2rem;
+    left: 13%;
+    top: 43%;
+    transform: translate(-13%,-42%);
+    background: rgba(13, 26, 46, 0.667);
+    color:  rgb(167, 206, 223);
+    font-size: 2rem;
+}
+.contact-me{
+    width: 100%;
+    height: 20rem;
+    background:rgba(13, 26, 46, 0.667);
+    color:rgb(167, 206, 223) ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact-me p{
+    color: lightblue;
+    font-size: 2rem ;
+font-weight: 5rem;
+border-bottom: lightslategray solid 2px;
+}
+.contact-me button{
+    width: 8rem;
+    height: 2.5rem;
+    border-radius: .6rem;
+    font-family: Times, serif;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 0px .5rem;
+    box-shadow: .1rem .1rem  rgb(134, 168, 182);
+    text-align: center;
+    cursor: pointer;
+    background-color: rgb(134, 168, 182);
+   
+
+}
+.footer{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer p{
+    font-family: fantasy;
+}
+.footer p:nth-child(1){
+    font-size :2rem;
+    font-weight: bold;
+    color:rgb(167, 206, 223) ;
+    line-height: 10px;
+}
+.footer p:nth-child(2){
+    font-size :2rem;
+    font-weight: bold;
+    color:rgb(167, 206, 223) ;
+    line-height: 10px;
+    text-align: center;
+    width:100%;
+}
+.social-icon a{
+    color: rgb(167, 206, 223);
+    font-size: 3rem;
+}
