@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Turret+Road:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="https://a.thumbs.redditmedia.com/zDOFJTXd6fmlD58VDGypiV94Leflz11woxmgbGY6p_4.png">
+
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="todo.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+
+
+    <title>to do list</title>
+</head>
+
+<body>
+    <div class="container1">
+
+        <nav>
+            <div class="navbar">
+                <a href="/homePage/index.html">SAL.com</a>
+                <a href="/homePage/index.html">home</a>
+                <a href="todo.html">todo list</a>
+                <a href="/calc/calcPage.html">calculator</a>
+            </div>
+        </nav>
+
+
+        <div class="container">
+            <div class="addTask">
+                <input type="text" placeholder="Add a Task">
+                <button>Add</button>
+            </div>
+
+            <ol class="notCompleted">
+                <h3>Not Completed</h3>
+            </ol>
+
+            <ol class="Completed">
+                <h3>Completed</h3>
+            </ol>
+        </div>
+        <footer>
+            <div class="footer">
+
+                <div>
+                    <a href="https://github.com/sajadahamsheh" class="fa fa-github" target="_blank">
+                    </a>
+                    <p>saja </p>
+                </div>
+                <div>
+
+                    <a href="https://github.com/anasJawabrah" class="fa fa-github" target="_blank"></a>
+                    <p>anas </p>
+                </div>
+                <div>
+
+                    <a href="https://github.com/lubna-almaaweed" class="fa fa-github" target="_blank"></a>
+
+
+                    <p>lubna </p>
+                </div>
+
+                <div class="dropup" style="line-height:4rem;">
+                    <button class="dropbtn"> your theme</button>
+                    <div class="dropup-content">
+                        <a id="co" onclick="change()"> change theme</a>
+                        <a id="co" onclick="noChange()"> rest changing</a>
+                        <a id="com"> changing</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </footer>
+    </div>
+
+    <script>
+        //changing theme
+
+        //whihe change
+        function change() {
+            document.body.style.backgroundColor = prompt('Enter your background color');
+            let myElements = document.querySelectorAll("li");
+
+            for (let i = 0; i <= myElements.length; i++) {
+                myElements[i].style.fontSize = prompt('Enter your font Size ');
+                // myElement[i].style.fontFamily = "'Turret Road', cursive";
+            }
+
+
+        }
+        //whithout changing
+        function noChange() {
+            document.body.style.backgroundColor = "white";
+            let myElements = document.querySelectorAll("li");
+
+            for (let i = 0; i <= myElements.length; i++) {
+                myElements[i].style.fontSize = "1.15rem";
+            }
+        }
+        $(document).ready(function() {
+            $("#com").click(function() {
+                $("li").css("fontFamily", "'Turret Road', cursive");
+            });
+        });
+
+
+
+        //add to  do list by enter key 
+        const input = document.querySelector('input');
+        const btn = document.querySelector('.addTask > button');
+
+        btn.addEventListener('click', addList);
+        input.addEventListener('keyup', (e) => {
+            (e.keyCode === 13 ? addList(e) : null);
+        })
+
+        // todo list function  
+        function addList(e) {
+            const notCompleted = document.querySelector('.notCompleted');
+            const Completed = document.querySelector('.Completed');
+
+            const newLi = document.createElement('li');
+            const checkBtn = document.createElement('button');
+            const delBtn = document.createElement('button');
+
+            checkBtn.innerHTML = '<i class="fa fa-check"></i>';
+            delBtn.innerHTML = '<i class="fa fa-trash"></i>';
+
+
+            if (input.value !== '') {
+                newLi.textContent = input.value;
+                input.value = '';
+                notCompleted.appendChild(newLi);
+                newLi.appendChild(checkBtn);
+                newLi.appendChild(delBtn);
+            }
+
+            checkBtn.addEventListener('click', function() {
+                const parent = this.parentNode;
+                parent.remove();
+                Completed.appendChild(parent);
+                checkBtn.style.display = 'none';
+            });
+
+            delBtn.addEventListener('click', function() {
+                const parent = this.parentNode;
+                parent.remove();
+            });
+        }
+    </script>
+
+</body>
+
+</html>

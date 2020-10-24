@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="https://a.thumbs.redditmedia.com/zDOFJTXd6fmlD58VDGypiV94Leflz11woxmgbGY6p_4.png">
+
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Turret+Road:wght@500&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+
+
+
+    <title>Document</title>
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <a href="index.html">SAL.com</a>
+            <a href="index.html">home</a>
+            <a href="/todo/todo.html">todo list</a>
+            <a href="/calc/calcPage.html">calculator</a>
+        </div>
+    </nav>
+
+    <div>
+        <form class="modal-content">
+            <div class="container">
+                <h1>Sign Up</h1>
+                <hr>
+                <i class="fa fa-user icon"></i>
+                <label for="user"><b>User Name</b></label>
+                <input type="text" placeholder="Enter Your Name" name="name" required>
+
+                <i class="fa fa-envelope icon"></i>
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <i class="fa fa-phone icon"></i>
+                <label for="phone"><b>Phone Number</b></label>
+                <input id="phone" type="text" placeholder="000-0000-000" name="phone" required maxlength="10">
+
+                <i class="fa fa-key icon"></i>
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required maxlength="10">
+
+                <i class="fa fa-key icon"></i>
+                <label for="psw-repeat"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" required maxlength="10">
+
+                <i class="fa fa-calendar icon"></i>
+                <label for="date"><b>Birth Of Date </b></label>
+                <input type="date" placeholder="Enter Your Birth Date" min='1950-01-01' max='2002-01-01' name="date" required>
+
+                <hr>
+                <label>
+                    <input type="checkbox"  name="agree" style="margin-bottom:10px"> I agree to the <a
+                        href="#" style="color:dodgerblue">Terms condition </a>and <a href="#" style="color:dodgerblue">
+                        privacy policy </a>
+
+
+                    <div class="clearfix">
+
+                        <button type="submit" id="submit-btn" onclick="saveInLocal()" class="signupbtn">submit</button>
+
+                        <button id="save-btn" type="submit" onclick="saveInSession()" class="signupbtn">save </button> ​
+
+                        <button type="reset" onclick="document.getElementById('id01').style.display='none'"
+                            class="cancelbtn">Cancel</button> ​
+
+                    </div>
+            </div>
+        </form>
+
+    </div>
+    <footer>
+        <div class="footer">
+
+            <div>
+                <a href="https://github.com/sajadahamsheh" class="fa fa-github" target="_blank">
+                </a>
+                <p>saja </p>
+            </div>
+            <div>
+
+                <a href="https://github.com/anasJawabrah" class="fa fa-github" target="_blank"></a>
+                <p>anas </p>
+            </div>
+            <div>
+
+                <a href="https://github.com/lubna-almaaweed" class="fa fa-github" target="_blank"></a>
+
+
+                <p>lubna </p>
+            </div>
+
+            <div class="dropup" style="line-height:4rem;">
+                <button class="dropbtn">your theme</button>
+                <div class="dropup-content">
+                    <a id="co" onclick="change()"> change them</a>
+                    <a id="co" onclick="noChange()"> rest changing</a>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    </div>
+    <script src="index.js"></script>
+    <script>
+        //changing theme
+        
+        //whihe change
+        function change() {
+            document.body.style.backgroundColor = prompt('Enter your background color');
+            let myElements = document.querySelectorAll(".container");
+            
+            for (let i = 0; i <= myElements.length; i++) {
+                myElements[i].style.fontSize = prompt('Enter your font Size ');
+                myElement[i].style.fontFamily = "'Turret Road', cursive";
+            }
+            
+            
+        }
+        //whithout changing
+        function noChange() {
+            document.body.style.backgroundColor = "white";
+            let myElements = document.querySelectorAll(".container");
+            
+            for (let i = 0; i <= myElements.length; i++) {
+                myElements[i].style.fontSize = "1.15rem";
+            }
+        }
+    </script>
+
+
+</body>
+</html>
